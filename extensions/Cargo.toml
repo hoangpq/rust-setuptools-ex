@@ -1,0 +1,21 @@
+[package]
+
+name = "hello-world"
+version = "0.0.1"
+authors = ["Hoang Phan <pquochoang2007@gmail.com>"]
+
+[features]
+python27-sys = ["cpython/python27-sys"]
+python3-sys = ["cpython/python3-sys"]
+
+[dependencies.cpython]
+git = "https://github.com/hoangpq/rust-cpython.git"
+rev = "92412cf"
+default-features = false
+
+[dependencies]
+reqwest = "0.9.13"
+
+[lib]
+name = "helloworld"
+crate-type = ["cdylib"]
